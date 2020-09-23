@@ -8,7 +8,14 @@ Created on Wed Sep 23 08:16:33 2020
 from osgeo import gdal
 import numpy as np
 
-file_paths = ['C:/Users/51922/Desktop/avg/3.tif','C:/Users/51922/Desktop/avg/2.tif','C:/Users/51922/Desktop/avg/1.tif']
+file_path = []
+count = 30
+while count > 0:
+    file_path.append("C:/Users/51922/Desktop/avg/" + count+ ".tif")
+    count-=1
+
+
+#file_paths = ['C:/Users/51922/Desktop/avg/3.tif','C:/Users/51922/Desktop/avg/2.tif','C:/Users/51922/Desktop/avg/1.tif']
 # We build one large np array of all images (this requires that all data fits in memory)
 res = []
 for f in file_paths:
